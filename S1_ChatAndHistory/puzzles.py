@@ -1,42 +1,24 @@
-import os
-import sys
-import langchain
-# import langchain_cohere
-import cohere.types
-os.environ["COHERE_API_KEY"] = "Your API key"
-
-from langchain_cohere import ChatCohere
-
-
-model = ChatCohere(model="command-r")
-
-print(model)
-print(sys.path)
-
-
 def puzzles(puzzleName):
-    if puzzleName == "tallBuilding":
-        return """A man who lives in a 30-story building decides to jump out of his window. 
-        He survives the fall with no injuries. How did that happen?"""
-    elif puzzleName == "hungryLions":
-        return """A man is condemned to death. He has to choose from three rooms to accept his punishment. 
-        The first room has a firing squad with guns loaded. The second room has a blazing fire. 
-        The third room is full of tigers that haven’t eaten for six months. Which room should he choose?"""
-    elif puzzleName == "walk10Flights":
-        return """A woman lives on the 30th floor and hates taking the stairs. 
-        Every day, she takes the elevator down to the lobby floor to go to work. 
-        When she comes home from work, she takes the elevator to the 20th floor and walks the rest of the way up, except on days when it rains. 
-        Those days, she takes the elevator all the way up. 
-        Why does she walk the last 10 flights of stairs if she hates it so much?"""
-    elif puzzleName == "screamDead":
-        return """A woman opened a door, screamed and was found dead a few minutes later. 
-        No gunshots were heard in the area. 
-        What happened to her?"""
+    if puzzleName == "glassBridge":
+        return """You are on a game show where you must cross a bridge made of 20 glass panels. 
+        Some of these panels are strong enough to hold your weight, while others will shatter when stepped on. 
+        You are given a single clue: the safe panels always align with Fibonacci numbers. 
+        How do you safely cross the bridge?"""
+    elif puzzleName == "lockedBox":
+        return """You are locked in a room with a sealed box. The box has a combination lock with three digits. 
+        Written on the wall is this riddle: 
+        'The lock’s key lies within a prime number; divide it by 3, and the remainder is 2.' 
+        What is the combination?"""
+    elif puzzleName == "invisibleInk":
+        return """A detective receives a blank letter in the mail. 
+        Knowing it’s a clue, he places it under UV light, revealing a message: 
+        'The truth is in the reflection of what you drink.' 
+        What does the detective do to solve the case?"""
+    elif puzzleName == "burningRope":
+        return """You have two ropes and a lighter. Each rope burns unevenly but takes exactly 60 minutes to burn from one end to the other. 
+        How can you measure exactly 45 minutes using these two ropes?"""
     else:
-        return """Four men, one of whom was known to have committed a certain crime, 
-        made the following statements when questioned by the police:
-        1. Archie: Dave did it.
-        2. Dave: Tony did it.
-        3. Gus: I didn’t do it.
-        4. Tony: Dave lied when he said I did it.
-        If only one of these four statements is true, who was the guilty man?"""
+        return """Five people are trapped on an island and must cross a rickety bridge to escape. 
+        The bridge can only hold two people at a time. They have one flashlight, and it must be carried whenever someone crosses the bridge. 
+        Person A takes 1 minute to cross, B takes 2 minutes, C takes 5 minutes, D takes 10 minutes, and E takes 15 minutes. 
+        How can they all cross the bridge in the shortest amount of time?"""
